@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Noto+Nastaliq+Urdu&family=Ysabeau:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/app.css">
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- ************** header ****************** -->
+        
+            <header class="w-full flex   bg-inherit items-center shadow z-10 ">
+                <section class="hidden lg:flex">
+                    <nav class="flex  items-center h-20">
+                    <!-- Social Links -->
+                <ul class=" items-start gap-3.5 lg:gap-4 xl:gap-9 hidden lg:flex ">
+
+                <li class="ms-10">
+                    <a class="text-gray-900 transition-all hover:text-red-500 "
+                    href="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                      </svg>
+                </a>
+            </li>
+            
+            
+            <li>
+                <a class="text-gray-900 transition-all hover:text-red-500 "
+                href="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                </svg>
+            </a>
+        </li>
+        
+        <li>
+            <a class="text-gray-900 transition-all hover:text-red-500 "
+             href="" title="instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+              </svg>
+        </a>
+    </li>
+
+            <li>
+                <a class="text-gray-900 transition-all hover:text-red-500 "
+                href="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitch" viewBox="0 0 16 16">
+                    <path d="M3.857 0 1 2.857v10.286h3.429V16l2.857-2.857H9.57L14.714 8V0H3.857zm9.714 7.429-2.285 2.285H9l-2 2v-2H4.429V1.143h9.142v6.286z"/>
+                    <path d="M11.857 3.143h-1.143V6.57h1.143V3.143zm-3.143 0H7.571V6.57h1.143V3.143z"/>
+                  </svg>
+            </a>
+        </li>
+        
+            <li class="me-10">
+                <a class="text-gray-900 transition-all hover:text-red-500 "
+                href="" >
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
+                    <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/>
+                  </svg>
+            </a>
+        </li>
+
+    </ul>
+                    
+                    <!-- **************** Social Links / End --******************> -->
+                     <!-- Navigation & Logo -->
+                    
+                    <div class="grid lg:grid-cols-[1fr_110px_1fr] xl:grid-cols-[1fr_150px_1fr] items-center">
+                        
+                        <!-- Navigation (Desktop) -->
+                        
+                        <ul class="hidden lg:gap-x-5 xl:gap-x-8 text-gray-900  lg:text-sm xl:text-base font-bold uppercase tracking-tight lg:flex min-[1260px]:gap-x-10 justify-self-end">
+                            <li class="ms-28">
+                                <a class="relative flex leading-10 transition-all after:absolute after:bottom-[7px] after:left-0 after:h-[2px] 
+                                after:transition-transform after:w-full after:origin-left after:scale-x-100 text-red-500 after:bg-red-500" href="">Home</a>
+                            </li>
+                            
+                            
+                            <li class="">
+                                <a class=
+                                "relative 
+                                flex
+                                leading-10
+                                 transition-all
+                                 after:absolute 
+                                after:bottom-[7px] 
+                                after:left-0 
+                                after:h-[2px] after:transition-transform 
+                                after:w-full
+                                 after:bg-gray-900 
+                                after:origin-right 
+                                hover:after:origin-left 
+                                after:scale-x-0 
+                                hover:after:scale-x-100 
+                                hover:text-red-500
+                                 hover:after:bg-red-500
+                                dark:hover:after:bg-red-500
+                                dark:after:bg-white"
+
+                                href="">Stream</a>
+                            </li>
+                            
+                            <li class="">
+                                <a class= "relative 
+                                flex
+                                leading-10
+                                 transition-all
+                                 after:absolute 
+                                after:bottom-[7px] 
+                                after:left-0 
+                                after:h-[2px] after:transition-transform 
+                                after:w-full
+                                 after:bg-gray-900 
+                                after:origin-right 
+                                hover:after:origin-left 
+                                after:scale-x-0 
+                                hover:after:scale-x-100 
+                                hover:text-red-500
+                                 hover:after:bg-red-500
+                                dark:hover:after:bg-red-500
+                                dark:after:bg-white"
+                                href="">Affiliates</a>
+                            </li>
+                        </ul>
+                        
+                        
+                        
+                        <!-- Navigation (Desktop) / End --><!-- Logo -->
+                        
+                        <div class="lg:mx-auto">
+                            <a href="">
+                            <div class=" flex h-12 rounded-full w-28 items-center justify-center overflow-hidden  bg-red-500 lg:w-[50px]">
+                                <svg class=" w-6 fill-white lg:w-[26px]" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M17 16L15 29.001L27 10.001H21L27.363 0H37L25 36H13L0 0H13L11 16H17Z"></path></svg>
+                            </div>
+                        </a>
+                    </div>
+                        <!-- Logo / End -->
+                        
+                        
+                        <!-- Navigation (Desktop) -->
+                        
+                        <ul class="hidden lg:gap-x-5 xl:gap-x-8 text-gray-900 dark:text-white lg:text-sm xl:text-base font-bold uppercase tracking-tight lg:flex min-[1260px]:gap-x-10">
+                            <li class="">
+                                <a class= "relative 
+                                flex
+                                leading-10
+                                 transition-all
+                                 after:absolute 
+                                after:bottom-[7px] 
+                                after:left-0 
+                                after:h-[2px] after:transition-transform 
+                                after:w-full
+                                 after:bg-gray-900 
+                                after:origin-right 
+                                hover:after:origin-left 
+                                after:scale-x-0 
+                                hover:after:scale-x-100 
+                                hover:text-red-500
+                                 hover:after:bg-red-500
+                                dark:hover:after:bg-red-500
+                                dark:after:bg-white
+                                uppercase "
+                                href="">Shop</a>
+                            </li>
+                                
+                            <li class="">
+                                <a class= "relative 
+                                flex
+                                leading-10
+                                 transition-all
+                                 after:absolute 
+                                after:bottom-[7px] 
+                                after:left-0 
+                                after:h-[2px] after:transition-transform 
+                                after:w-full
+                                 after:bg-gray-900 
+                                after:origin-right 
+                                hover:after:origin-left 
+                                after:scale-x-0 
+                                hover:after:scale-x-100 
+                                hover:text-red-500
+                                 hover:after:bg-red-500
+                                dark:hover:after:bg-red-500
+                                dark:after:bg-white
+                                uppercase"
+                                href="">Contact</a>
+                            </li>
+
+                            <li class="">
+                                <a class= "relative 
+                                uppercase
+                                flex
+                                leading-10
+                                 transition-all
+                                 after:absolute 
+                                after:bottom-[7px] 
+                                after:left-0 
+                                after:h-[2px] after:transition-transform 
+                                after:w-full
+                                 after:bg-gray-900 
+                                after:origin-right 
+                                hover:after:origin-left 
+                                after:scale-x-0 
+                                hover:after:scale-x-100 
+                                hover:text-red-500
+                                 hover:after:bg-red-500"
+                        
+                                href="">DONATE</a>
+                            </li>
+                        </ul>
+
+                        </div>
+                                
+                        
+                        <!-- Navigation (Desktop) / End -->
+                    
+                    
+                    
+                    <!-- Navigation & Logo / End -->
+                    
+                    <!-- Header Controls -->
+        
+                    
+                    <div class="flex ml-auto items-center">
+                        
+                        <a class="relative mr-4 hidden h-10 items-center overflow-hidden bg-gradient-to-r from-[#9246ff] to-[#ff46aa] pl-10 text-sm font-bold uppercase tracking-tight transition-all 
+                        hover:hue-rotate-60
+                          xl:inline-flex  min-[1350px]:pr-5 " href="#">
+
+                            <svg class="absolute -left-2 top-[3px] block h-[46px] w-10 " 
+                            viewBox="0 0 40 46" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 1.10001H37.1V22.1L25.286 33.1H5.09998L8.5 1.10001Z" fill="white"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M25.002 37.786H18.333L9.99601 45.1V37.786H-0.00799561V8.214L8.32901 0H40.008V22.1L25.002 37.786ZM36.1 2.1H9.10001V27.1H16.1V33.1L22.1 27.1H29.1L36.1 20.1V2.1ZM27.993 9.004H30.986V18.985H27.993V9.004ZM19.009 9.004H22V18.985H19.009V9.004Z" fill="black"></path></svg>
+                            
+                            <span class="hidden min-[1350px]:block">Subscribe!</span>
+                        </a>
+                        
+                                <!-- ******************subscrib end************** -->
+
+                            <a class="flex py-4 px-2 xl:px-3" href="">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-purple-900 dark:fill-white " width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                                  </svg>
+                            </a>
+                        
+                            <!-- **************end user*************** -->
+                        
+                        <a class="relative block py-4 px-1 sm:px-2" href="">
+                              
+                            <svg xmlns="http://www.w3.org/2000/svg"  class="h-6 w-6 fill-gray-900 dark:fill-white"  width="16" height="16" fill="currentColor" class="bi bi-basket2" viewBox="0 0 16 16">
+                                <path d="M4 10a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 1 1 2 0v2a1 1 0 0 1-2 0v-2z"/>
+                                <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-.623l-1.844 6.456a.75.75 0 0 1-.722.544H3.69a.75.75 0 0 1-.722-.544L1.123 8H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM2.163 8l1.714 6h8.246l1.714-6H2.163z"/>
+                              </svg>
+
+                            <span class="  absolute top-1 -right-2.5 text-sm font-bold leading-none w-5 h-5 rounded-full bg-red-500 flex justify-center items-center">2<span>
+                        </a>
+
+                        <!-- ************************* end basket *********************** -->
+                    </div>
+                </nav>
+            </section>
+            
+            
+            
+            <section class="flex flex-wrap lg:hidden w-[100%] justify-center">
+                <nav class="flex flex-wrap justify-start items-center w-[100%] relative">
+                    <ul class="flex justify-end items-center w-[100%] h-14">
+                        
+                        <li class="pe-3 cursor-pointer">
+                            <div class="lg:mx-auto">
+                                <a href="">
+                                <div class=" flex h-10 me-60 rounded-full w-20 items-center justify-center overflow-hidden  bg-red-500 ">
+                                    <svg class=" w-6 fill-white lg:w-[26px]" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M17 16L15 29.001L27 10.001H21L27.363 0H37L25 36H13L0 0H13L11 16H17Z"></path></svg>
+                                </div>
+                            </a>
+                        </div>
+                        </li>
+
+                        <li>
+                            <a class="flex py-4 px-2 xl:px-3" href="">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-purple-900 dark:fill-white " width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                                  </svg>
+                            </a>
+                        
+                            <!-- **************end user*************** -->
+                        
+                        </li>
+
+                        <li class="me-4">
+                        <a class="relative block py-4 px-1 sm:px-2" href="">
+                              
+                            <svg xmlns="http://www.w3.org/2000/svg"  class="h-6 w-6 fill-gray-900 dark:fill-white"  width="16" height="16" fill="currentColor" class="bi bi-basket2" viewBox="0 0 16 16">
+                                <path d="M4 10a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 1 1 2 0v2a1 1 0 0 1-2 0v-2z"/>
+                                <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-.623l-1.844 6.456a.75.75 0 0 1-.722.544H3.69a.75.75 0 0 1-.722-.544L1.123 8H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM2.163 8l1.714 6h8.246l1.714-6H2.163z"/>
+                              </svg>
+
+                            <span class="  absolute top-1 -right-2.5 text-sm font-bold leading-none w-5 h-5 rounded-full bg-red-500 flex justify-center items-center">2<span>
+                        </a>
+
+                        <!-- ************************* end basket *********************** -->
+                        </li>
+                        <li id="toggle" onclick="_aside(this)" class="w-10 h-10 ms-4 cursor-pointer show_aside">
+                            <span class="bg-black w-8 mt-2 h-0.5 flex"></span>
+                            <span class="bg-black w-8 mt-2 h-0.5 flex"></span>
+                            <span class="bg-black w-8 mt-2 h-0.5 flex"></span>
+                        </li>
+                    </ul>
+
+                    
+                    <ul id="aside"
+                        class=" w-auto overflow-hidden bg-white top-0 translate-x-[100%] left-0 absolute lg:hidden h-screen ps-3 flex justify-start flex-wrap mb-2 z-20">
+                        <li class="w-[100%] h-10 cursor-pointer close-icon flex justify-end pe-5">
+                            <span class="bg-black absolute w-6 h-0.5 top-6 flex rotate-[45deg]"></span>
+                            <span class="bg-black absolute w-6 h-0.5 top-6 flex -rotate-[45deg]"></span>
+                        </li>
+                        <li class="flex w-[100%] items-center  border-b border-b-gray-200/50"><a class=" uppercase leading-normal text-gray-900 transition-colors hover:text-red-500 font-bold" href="">Home</a></li>
+
+                        <li class="flex w-[100%] items-center  border-b border-b-gray-200/50"><a class=" uppercase leading-normal text-gray-900 transition-colors hover:text-red-500 font-bold" href="">STREAM</a></li>
+
+                        <li class="flex w-[100%] items-center  border-b border-b-gray-200/50"><a class=" uppercase leading-normal text-gray-900 transition-colors hover:text-red-500 font-bold" href="">AFFILIATES</a></li>
+                        <li class="flex w-[100%] items-center  border-b border-b-gray-200/50"><a class=" uppercase leading-normal text-gray-900 transition-colors hover:text-red-500 font-bold" href="">SHOP</a></li>
+                        <li class="flex w-[100%] items-center  border-b border-b-gray-200/50"><a class=" uppercase leading-normal text-gray-900 transition-colors hover:text-red-500 font-bold" href="">CONTACT</a></li>
+                        <li class="flex w-[100%] items-center  border-b border-b-gray-200/50"><a class=" uppercase leading-normal text-gray-900 transition-colors hover:text-red-500 font-bold" href="">DONATE</a></li>
+
+                            <li class="flex flex-wrap ps-5 mt-5 "><a class="text-red-500 transition-colors hover:text-gray-900 " href="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                                  </svg>                        
+                             </a>
+                         </li>
+                            
+                            <li  class="flex flex-wrap ps-5 mt-5"><a class="text-red-500 transition-colors hover:text-gray-900" href="">
+                                
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                                </svg>
+                             </a>
+                          </li>  
+
+                            <li  class="flex flex-wrap ps-5 mt-5"><a class="text-red-500 transition-colors hover:text-gray-900" href="">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                                  </svg>                                  
+                            </a></li>
+                            
+                            <li  class="flex flex-wrap ps-5 mt-5"><a class="text-red-500 transition-colors hover:text-gray-900" href="">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitch" viewBox="0 0 16 16">
+                                    <path d="M3.857 0 1 2.857v10.286h3.429V16l2.857-2.857H9.57L14.714 8V0H3.857zm9.714 7.429-2.285 2.285H9l-2 2v-2H4.429V1.143h9.142v6.286z"/>
+                                    <path d="M11.857 3.143h-1.143V6.57h1.143V3.143zm-3.143 0H7.571V6.57h1.143V3.143z"/>
+                                  </svg>                                    </a></li>
+                            
+                                  <li  class="flex flex-wrap ps-5 mt-5"><a class="text-red-500 transition-colors hover:text-gray-900" href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
+                                    <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/>
+                                  </svg>                                        
+                            </a></li>
+                    </ul>
+
+                </nav>
+            </section>
+        </header>
+
+                
+                        </div>
+                </nav>
+            </div>
+        </header>
+
+
+    </div>
+
+
+<!-- ****************************end header *************************** -->
+
+
+<!-- ********************************section1**************************** -->
+
+<div class="relative h-[360px] w-full overflow-hidden sm:h-[420px] md:h-[440px] lg:h-[540px] xl:h-[640px]">
+    <div class="relative z-10 mx-auto max-w-[1440px] px-5">
+        <div class="absolute top-32 left-0 w-full px-5 text-center md:top-36 lg:top-32 lg:left-1/2 lg:w-1/2 lg:px-0 lg:text-left xl:-ml-10">
+            <h1 class="text-5xl font-yasi font-bold uppercase tracking-tighter text-gray-900 dark:text-white sm:text-6xl md:text-7xl lg:text-9xl lg:leading-[0.75em] xl:text-[170px]">
+                <span class="text-red-500">Retro</span>
+                 Gaming</h1>
+                 <div class="text-lg font-medium uppercase tracking-tighter text-gray-900 dark:text-white sm:text-xl lg:pt-4 lg:text-2xl xl:pt-5 xl:pl-3 xl:text-[26px]">MON - WED - SUN - 9.00PM PCT</div>
+                </div>
+
+                <div class="hidden md:block">
+                    <div class="absolute left-5 top-8 aspect-square w-3.5 bg-white"></div>
+                    <div class="absolute right-[91px] top-[120px] aspect-square w-1 bg-red-500"></div>
+                    <div class="absolute right-[168px] top-[120px] aspect-square w-1 bg-red-500"></div>
+                    <div class="absolute right-[91px] top-[197px] aspect-square w-1 bg-red-500"></div>
+                    <div class="absolute right-[91px] top-8 aspect-square w-1 bg-red-500"></div>
+                    <div class="absolute right-[168px] top-8 aspect-square w-1 bg-red-500"></div>
+                    <div class="absolute right-[244px] top-8 aspect-square w-1 bg-red-500"></div>
+                    <div class="absolute right-[321px] top-8 aspect-square w-1 bg-red-500"></div>
+                    <div class="absolute right-[398px] top-8 aspect-square w-1 bg-red-500"></div>
+                    <div class="absolute right-[474px] top-8 aspect-square w-1 bg-red-500"></div>
+                    <div class="absolute right-[551px] top-8 aspect-square w-1 bg-red-500"></div>
+                    <div class="absolute right-[627px] top-8 aspect-square w-1 bg-red-500"></div>
+                    <div class="absolute right-[704px] top-8 aspect-square w-1 bg-red-500"></div>
+                    <div class="absolute right-[91px] top-8 aspect-square w-1 bg-red-500"></div>
+                    <div class="absolute right-1 top-8 aspect-square w-3.5 bg-red-500"></div>
+                    <div class="absolute right-1 top-[120px] aspect-square w-1 bg-red-500"></div>
+                    <div class="absolute right-1 top-[197px] aspect-square w-1 bg-red-500"></div>
+                    <div class="absolute right-1 top-[274px] aspect-square w-1 bg-red-500"></div>
+                    <div class="absolute right-1 top-[351px] aspect-square w-1 bg-red-500"></div>
+                </div>
+            </div>
+            <div class=" absolute left-0 top-0 z-[5] h-full w-[calc(30vw-130px)] bg-red-500 skew-y-12 "></div>
+            <div class="absolute left-1/2 bottom-0 z-[5] ml-40 flex w-[50w]">
+                <div class="  h-14 w-28 bg-red-500 ms-4 skew-y-12 mb-4"></div>
+                <div class=" h-14 w-28 bg-red-500 ms-4 skew-y-12 mb-4"></div>
+                <div class=" h-14 w-28 bg-red-500 ms-4 skew-y-12 mb-4"></div>
+                <div class=" h-14 w-28 bg-red-500 ms-4 skew-y-12 mb-4"></div>
+                <div class=" h-14 w-20 bg-red-500 ms-4 skew-y-12 mb-4"></div>
+            </div>
+
+
+            <img class="absolute left-1/2 z-[6] -translate-x-[103%] hidden lg:block" src="img/hero-character.png" alt="">
+            <div class="left-0 top-0 block h-full w-full bg-[url('../img/hero-character.png')] bg-cover bg-center bg-no-repeat opacity-20">
+            <div class="absolute inset-0 z-[1] bg-gray-100 mix-blend-color"></div>
+            <div class="absolute inset-0 z-[2] mix-blend-multiply bg-gray-100"></div>
+            <div class="absolute inset-0 z-[3] opacity-40 mix-blend-screen  bg-gray-100">
+
+            </div>
+        </div>
+
+        </div>
+
+        <!-- *************** end section1 *************** -->
+
+        <!-- ******************** start section2 **************** -->
+
+        <section class="pb-14 lg:pb-[88px] mt-28">
+            <div class="container">
+                <div class="grid grid-cols-12 gap-x-5 gap-y-6 md:gap-x-6 lg:gap-x-7.5">
+                    <h5 class="col-span-full mb-8 text-center font-bold uppercase leading-tight tracking-tighter text-gray-900 text-md md:mb-12 xl:mb-10">
+                        These are some of my
+                         <span class="text-red-500">partners</span>
+                          and brands I've worked with</h5>
+                          <div class="col-span-4 lg:col-span-2">
+                            <a href="#" class="group"><img class="mx-auto opacity-20 transition-opacity group-hover:opacity-100" src="img/sponsor-1-sm.png" alt=""></a>
+                        </div>
+                        <div class="col-span-4 lg:col-span-2">
+                            <a href="#" class="group"><img class="mx-auto opacity-20 transition-opacity group-hover:opacity-100" src="img/sponsor-2-sm.png" alt=""></a>
+                        </div>
+                        <div class="col-span-4 lg:col-span-2">
+                            <a href="#" class="group"><img class="mx-auto opacity-20 transition-opacity group-hover:opacity-100" src="img/sponsor-3-sm.png" alt=""></a>
+                        </div>
+                        <div class="col-span-4 lg:col-span-2">
+                            <a href="#" class="group"><img class="mx-auto opacity-20 transition-opacity group-hover:opacity-100" src="img/sponsor-4-sm.png" alt=""></a>
+                        </div>
+                        <div class="col-span-4 lg:col-span-2">
+                            <a href="#" class="group"><img class="mx-auto opacity-20 transition-opacity group-hover:opacity-100" src="img/sponsor-5-sm.png" alt=""></a>
+                        </div>
+                        <div class="col-span-4 lg:col-span-2"><a href="#" class="group"><img class="mx-auto opacity-20 transition-opacity group-hover:opacity-100" src="img/sponsor-6-sm.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        <!-- *************** end section2 **************** -->
+
+        <!-- *********************start section3 ****************** -->
+        <section class="py-14 lg:py-[88px]">
+            <div class="container">
+                <div class="grid grid-cols-12 gap-x-5 md:gap-x-6 lg:gap-x-7.5 gap-y-12">
+                    <div class="col-span-full md:col-span-6 relative pl-5 md:pl-32 z-[2] md:pt-6 lg:pt-8 xl:pt-10">
+                        <div class=" flex flex-row mb-9 sm:mb-12 md:mb-14 lg:mb-16 xl:mb-20 justify-between items-end">
+                            <div class="flex flex-col">
+                                <div class="text-base font-naz uppercase tracking-tight text-red-500 md:text-lg lg:text-xl xl:text-1.5xl mb-2">About Me</div>
+                                <h2 class="font-nazi uppercase leading-none tracking-tighter text-gray-900 dark:text-white text-2.5xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6.5xl xl:leading-[0.85em]">Hi! I'm Neko Magix<br>The <span class="text-red-500 font-medium">Retro Streamer</span> from L.A.</h2>
+                            </div>
+                        </div>
+
+                    <div class="lg:max-w-sm xl:max-w-[402px] xl:-mt-4 text-gray-500">
+                        <p class="font-naz">My name is Marina Valentine, but lots of you may know me as NekoMaGiX! I started streaming in 2016 and never stopped since then. I mostly play retro games from the 90’s and 00’s to bring back that nostalgic feel!</p>
+                        <div class="flex justify-end pb-4 pt-8 lg:pt-12">
+                            <div class=" text-lg  lg:text-3xl  leading-tight -rotate-6 pr-2 font-yas">Marina Valentine</div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-span-full md:col-span-6 p-5 md:p-0">
+                    <figure class="relative isolate z-[1]"><img src="img/about-me.jpg" alt="">
+                        <!-- ********copy Svg ******** -->
+                         <svg class="hidden text-gray-400 md:block md:absolute md:-left-16 md:top-6 md:w-[370px] lg:w-[400px] xl:-left-32 xl:top-12 xl:w-[470px] aspect-[47/50] -z-10" fill="none" viewBox="0 0 470 500"><defs><pattern id="dotted-pattern" x="0" y="0" width="26" height="26" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="3" height="3" class="text-gray dark:text-[#70747b]" fill="currentColor"></rect></pattern></defs><rect width="470" height="500" fill="url(#dotted-pattern)"></rect></svg>
+
+                   </figure>
+               </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- *************** end section3 ***************** -->
+
+  <!-- ********************* Start section4 ********************* -->
+    <section class="py-14 lg:py-[88px]">
+        <div class="container">
+            <!-- *******start***** -->
+            <div class=" flex flex-row mb-9 sm:mb-12 md:mb-14 lg:mb-16 xl:mb-20 justify-center">
+                <div class="flex flex-col items-center">
+                    <div class="text-base font-medium uppercase tracking-tight text-red-500 md:text-lg lg:text-xl xl:text-1.5xl">My Streaming</div>
+                    <h2 class="font-bold uppercase leading-none tracking-tighter text-gray-900 before:inline-block before:text-red-500  before:content-['.'] before:mr-[0.15em] text-3xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-6.5xl xl:leading-[0.85em]">Gear</h2>
+                </div>
+            </div>
+            <!-- ******* end ***** -->
+
+            <div class="grid grid-cols-12 gap-x-5 gap-y-10 md:gap-x-6 lg:gap-x-7.5 p-5 ms-0 md:p-16 md:ms-10">
+                <div class=" col-span-6  sm:col-span-4 lg:col-span-3 xl:col-span-2">
+                    <div>
+                       <!-- ******** img****** -->
+                        <figure class="relative overflow-hidden mb-5">
+                            <a class="block group" href="#">
+                                <img class=" w-full object-cover transition-transform duration-300 group-hover:scale-110" src="img/gear-1-170x170.jpg" alt="Raptor RM Anywhere">
+                            </a>
+                        </figure>
+                        
+                        
+                        <div>
+                            <!-- *******svg****** -->
+                            <div class="mb-4   h-24 flex justify-start items-center">
+                                
+                                <svg class="h-[80px] w-[100px] fill-red-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mouse3" viewBox="0 0 16 16">
+                                    <path d="M7 0c-.593 0-1.104.157-1.527.463-.418.302-.717.726-.93 1.208C4.123 2.619 4 3.879 4 5.187v.504L3.382 6A2.5 2.5 0 0 0 2 8.236v2.576C2 13.659 4.22 16 7 16h2c2.78 0 5-2.342 5-5.188V7.51a.71.71 0 0 0 0-.02V5.186c0-1.13-.272-2.044-.748-2.772-.474-.726-1.13-1.235-1.849-1.59C9.981.123 8.26 0 7 0zm2.5 6.099V1.232c.51.11 1.008.267 1.46.49.596.293 1.099.694 1.455 1.24.355.543.585 1.262.585 2.225v1.69l-3.5-.778zm-1-5.025v4.803L5 5.099c.006-1.242.134-2.293.457-3.024.162-.366.363-.63.602-.801C6.292 1.105 6.593 1 7 1c.468 0 .98.018 1.5.074zM5 6.124 13 7.9v2.912C13 13.145 11.19 15 9 15H7c-2.19 0-4-1.855-4-4.188V8.236a1.5 1.5 0 0 1 .83-1.342l.187-.093c.01.265.024.58.047.92.062.938.19 2.12.462 2.937a.5.5 0 1 0 .948-.316c-.227-.683-.35-1.75-.413-2.688a29.17 29.17 0 0 1-.06-1.528v-.002z"/>
+                                  </svg>
+                            </div>
+                               <!-- ********* text ******** -->
+                                <div class="mb-7">
+                                    <h4 class="uppercase font-bold tracking-tighter text-base leading-none text-gray-900 dark:text-white mb-2">Raptor RM Anywhere</h4>
+                                    <div class="uppercase font-bold tracking-tighter text-base leading-none text-red-500">Raxor</div>
+                                </div>
+                                <!-- ********** btn ******** -->
+                                <a href="#" class="inline-flex text-center font-bold leading-none transition-colors uppercase justify-center gap-x-3 py-3 px-4 md:py-[13px] lg:px-7 text-sm text-gray-600 ring-1 ring-inset ring-gray-600 bg-transparent hover:bg-red-500 hover:text-white hover:ring-red-500">Get it here!</a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=" col-span-6  sm:col-span-4 lg:col-span-3 xl:col-span-2">
+                        <div>
+                           <!-- ******** img****** -->
+                            <figure class="relative overflow-hidden mb-5">
+                                <a class="block group" href="#"><img class="aspect-square w-full object-cover transition-transform duration-300 group-hover:scale-110" src="img/gear-2-170x170.jpg" alt="Raptor RM Anywhere"></a>
+                            </figure>
+                            
+                            
+                            <div>
+                                <!-- *******svg****** -->
+                                <div class="mb-4   h-24 flex justify-start items-center">
+                                    <svg class="h-[80px] w-[100px] fill-red-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-headset" viewBox="0 0 16 16">
+                                        <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5z"/>
+                                      </svg>
+                                </div>
+                                   <!-- ********* text ******** -->
+                                    <div class="mb-7">
+                                        <h4 class="uppercase font-bold tracking-tighter text-base leading-none text-gray-900 dark:text-white mb-2">SOUNDMASTER X5</h4>
+                                        <div class="uppercase font-bold tracking-tighter text-base leading-none text-red-500">SORNY</div>
+                                    </div>
+                                    <!-- ********** btn ******** -->
+                                    <a href="#" class="inline-flex text-center font-bold leading-none transition-colors uppercase justify-center gap-x-3 py-3 px-4 md:py-[13px] lg:px-7 text-sm text-gray-600 ring-1 ring-inset ring-gray-600 bg-transparent hover:bg-red-500 hover:text-white hover:ring-red-500">Get it here!</a>
+    
+                                </div>
+                            </div>
+                        </div>
+                    
+
+                    <div class=" col-span-6  sm:col-span-4 lg:col-span-3 xl:col-span-2">
+                        <div>
+                           <!-- ******** img****** -->
+                            <figure class="relative overflow-hidden mb-5">
+                                <a class="block group" href="#"><img class="aspect-square w-full object-cover transition-transform duration-300 group-hover:scale-110" src="img/gear-3-170x170.jpg" alt="Raptor RM Anywhere"></a>
+                            </figure>
+                            
+                            
+                            <div>
+                                <!-- *******svg****** -->
+                                <div class="mb-4   h-24 flex justify-start items-center">
+                                      <svg class="h-[80px] w-[100px] fill-red-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-keyboard-fill" viewBox="0 0 16 16">
+                                        <path d="M0 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6zm13 .25v.5c0 .138.112.25.25.25h.5a.25.25 0 0 0 .25-.25v-.5a.25.25 0 0 0-.25-.25h-.5a.25.25 0 0 0-.25.25zM2.25 8a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h.5A.25.25 0 0 0 3 8.75v-.5A.25.25 0 0 0 2.75 8h-.5zM4 8.25v.5c0 .138.112.25.25.25h.5A.25.25 0 0 0 5 8.75v-.5A.25.25 0 0 0 4.75 8h-.5a.25.25 0 0 0-.25.25zM6.25 8a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h.5A.25.25 0 0 0 7 8.75v-.5A.25.25 0 0 0 6.75 8h-.5zM8 8.25v.5c0 .138.112.25.25.25h.5A.25.25 0 0 0 9 8.75v-.5A.25.25 0 0 0 8.75 8h-.5a.25.25 0 0 0-.25.25zM13.25 8a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h.5a.25.25 0 0 0 .25-.25v-.5a.25.25 0 0 0-.25-.25h-.5zm0 2a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h.5a.25.25 0 0 0 .25-.25v-.5a.25.25 0 0 0-.25-.25h-.5zm-3-2a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h1.5a.25.25 0 0 0 .25-.25v-.5a.25.25 0 0 0-.25-.25h-1.5zm.75 2.25v.5c0 .138.112.25.25.25h.5a.25.25 0 0 0 .25-.25v-.5a.25.25 0 0 0-.25-.25h-.5a.25.25 0 0 0-.25.25zM11.25 6a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h.5a.25.25 0 0 0 .25-.25v-.5a.25.25 0 0 0-.25-.25h-.5zM9 6.25v.5c0 .138.112.25.25.25h.5a.25.25 0 0 0 .25-.25v-.5A.25.25 0 0 0 9.75 6h-.5a.25.25 0 0 0-.25.25zM7.25 6a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h.5A.25.25 0 0 0 8 6.75v-.5A.25.25 0 0 0 7.75 6h-.5zM5 6.25v.5c0 .138.112.25.25.25h.5A.25.25 0 0 0 6 6.75v-.5A.25.25 0 0 0 5.75 6h-.5a.25.25 0 0 0-.25.25zM2.25 6a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h1.5A.25.25 0 0 0 4 6.75v-.5A.25.25 0 0 0 3.75 6h-1.5zM2 10.25v.5c0 .138.112.25.25.25h.5a.25.25 0 0 0 .25-.25v-.5a.25.25 0 0 0-.25-.25h-.5a.25.25 0 0 0-.25.25zM4.25 10a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h5.5a.25.25 0 0 0 .25-.25v-.5a.25.25 0 0 0-.25-.25h-5.5z"/>
+                                      </svg>
+                                </div>
+                                   <!-- ********* text ******** -->
+                                    <div class="mb-7">
+                                        <h4 class="uppercase font-bold tracking-tighter text-base leading-none text-gray-900 dark:text-white mb-2">CARBON Z81 RGB</h4>
+                                        <div class="uppercase font-bold tracking-tighter text-base leading-none text-red-500">BUCCANEER</div>
+                                    </div>
+                                    <!-- ********** btn ******** -->
+                                    <a href="#" class="inline-flex text-center font-bold leading-none transition-colors uppercase justify-center gap-x-3 py-3 px-4 md:py-[13px] lg:px-7 text-sm text-gray-600 ring-1 ring-inset ring-gray-600 bg-transparent hover:bg-red-500 hover:text-white hover:ring-red-500">Get it here!</a>
+    
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class=" col-span-6  sm:col-span-4 lg:col-span-3 xl:col-span-2">
+                            <div>
+                               <!-- ******** img****** -->
+                                <figure class="relative overflow-hidden mb-5">
+                                    <a class="block group" href="#"><img class="aspect-square w-full object-cover transition-transform duration-300 group-hover:scale-110" src="img/gear-4-170x170.jpg" alt="Raptor RM Anywhere"></a>
+                                </figure>
+                                
+                                
+                                <div>
+                                    <!-- *******svg****** -->
+                                    <div class="mb-4   h-24 flex justify-start items-center">
+                                          
+                                          <svg class="h-[80px] w-[100px] fill-red-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-display" viewBox="0 0 16 16">
+                                            <path d="M0 4s0-2 2-2h12s2 0 2 2v6s0 2-2 2h-4c0 .667.083 1.167.25 1.5H11a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1h.75c.167-.333.25-.833.25-1.5H2s-2 0-2-2V4zm1.398-.855a.758.758 0 0 0-.254.302A1.46 1.46 0 0 0 1 4.01V10c0 .325.078.502.145.602.07.105.17.188.302.254a1.464 1.464 0 0 0 .538.143L2.01 11H14c.325 0 .502-.078.602-.145a.758.758 0 0 0 .254-.302 1.464 1.464 0 0 0 .143-.538L15 9.99V4c0-.325-.078-.502-.145-.602a.757.757 0 0 0-.302-.254A1.46 1.46 0 0 0 13.99 3H2c-.325 0-.502.078-.602.145z"/>
+                                          </svg>
+                                    </div>
+                                       <!-- ********* text ******** -->
+                                        <div class="mb-7">
+                                            <h4 class="uppercase font-bold tracking-tighter text-base leading-none text-gray-900 dark:text-white mb-2">GLX 019 FULL 4K</h4>
+                                            <div class="uppercase font-bold tracking-tighter text-base leading-none text-red-500">SANGSTEEN</div>
+                                        </div>
+                                        <!-- ********** btn ******** -->
+                                        <a href="#" class="inline-flex text-center font-bold leading-none transition-colors uppercase justify-center gap-x-3 py-3 px-4 md:py-[13px] lg:px-7 text-sm text-gray-600 ring-1 ring-inset ring-gray-600 bg-transparent hover:bg-red-500 hover:text-white hover:ring-red-500">Get it here!</a>
+        
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+
+
+                            <div class=" col-span-6  sm:col-span-4 lg:col-span-3 xl:col-span-2">
+                                <div>
+                                   <!-- ******** img****** -->
+                                    <figure class="relative overflow-hidden mb-5">
+                                        <a class="block group" href="#"><img class="aspect-square w-full object-cover transition-transform duration-300 group-hover:scale-110" src="img/gear-5-170x170.jpg" alt="Raptor RM Anywhere"></a>
+                                    </figure>
+                                    
+                                    
+                                    <div>
+                                        <!-- *******svg****** -->
+                                        <div class="mb-4   h-24 flex justify-start items-center">
+                                     
+                                              <svg class="h-[80px] w-[100px] fill-red-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tv" viewBox="0 0 16 16">
+                                                <path d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zM13.991 3l.024.001a1.46 1.46 0 0 1 .538.143.757.757 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.464 1.464 0 0 1-.143.538.758.758 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.464 1.464 0 0 1-.538-.143.758.758 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.46 1.46 0 0 1 .143-.538.758.758 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3h11.991zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2z"/>
+                                              </svg>                                        </div>
+                                           <!-- ********* text ******** -->
+                                            <div class="mb-7">
+                                                <h4 class="uppercase font-bold tracking-tighter text-base leading-none text-gray-900 dark:text-white mb-2">DABOTTOMS DELUXE 5</h4>
+                                                <div class="uppercase font-bold tracking-tighter text-base leading-none text-red-500 ">SWORDISH</div>
+                                            </div>
+                                            <!-- ********** btn ******** -->
+                                            <a href="#" class="inline-flex text-center font-bold leading-none transition-colors uppercase justify-center gap-x-3 py-3 px-4 md:py-[13px] lg:px-7 text-sm text-gray-600 ring-1 ring-inset ring-gray-600 bg-transparent hover:bg-red-500 hover:text-white hover:ring-red-500">Get it here!</a>
+            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+
+                                <div class=" col-span-6  sm:col-span-4 lg:col-span-3 xl:col-span-2">
+                                    <div>
+                                       <!-- ******** img****** -->
+                                        <figure class="relative overflow-hidden mb-5">
+                                            <a class="block group" href="#"><img class="aspect-square w-full object-cover transition-transform duration-300 group-hover:scale-110" src="img/gear-6-170x170.jpg" alt="Raptor RM Anywhere"></a>
+                                        </figure>
+                                        
+                                        
+                                        <div>
+                                            <!-- *******svg****** -->
+                                            <div class="mb-4   h-24 flex justify-start items-center">
+                                
+                                                  <svg class="h-[80px] w-[100px] fill-red-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mouse2" viewBox="0 0 16 16">
+                                                    <path d="M3 5.188C3 2.341 5.22 0 8 0s5 2.342 5 5.188v5.625C13 13.658 10.78 16 8 16s-5-2.342-5-5.188V5.189zm4.5-4.155C5.541 1.289 4 3.035 4 5.188V5.5h3.5V1.033zm1 0V5.5H12v-.313c0-2.152-1.541-3.898-3.5-4.154zM12 6.5H4v4.313C4 13.145 5.81 15 8 15s4-1.855 4-4.188V6.5z"/>
+                                                  </svg>
+                                            </div>
+                                               <!-- ********* text ******** -->
+                                                <div class="mb-7">
+                                                    <h4 class="uppercase font-bold tracking-tighter text-base leading-none text-gray-900 dark:text-white mb-2">IRON SERIES GQ+</h4>
+                                                    <div class="uppercase font-bold tracking-tighter text-base leading-none text-red-500">GQ SOLUTIONS</div>
+                                                </div>
+                                                <!-- ********** btn ******** -->
+                                                <a href="#" class="inline-flex text-center font-bold leading-none transition-colors uppercase justify-center gap-x-3 py-3 px-4 md:py-[13px] lg:px-7 text-sm text-gray-600 ring-1 ring-inset ring-gray-600 bg-transparent hover:bg-red-500 hover:text-white hover:ring-red-500">Get it here!</a>
+                
+                                            </div>
+                                        </div>
+                                    </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+
+    
+                                  <!-- ******************* end section4 ****************** -->
+
+                                 <!-- ************************ start section5************************** -->
+
+                                 <section class="py-14 lg:py-[88px]">
+                                    <div class="container">
+
+                                         <!-- ***************  Start aval ******************* -->
+                                        <div class=" flex flex-row mb-9 sm:mb-12 md:mb-14 lg:mb-16 xl:mb-20 justify-between items-end">
+                                            <div class="flex flex-col ms-3 md:mb-6 lg:ms-40">
+                                                <div class="text-base font-medium uppercase tracking-tight text-red-500 md:text-lg lg:text-xl xl:text-1.5xl">Keep Updated!</div>
+                                                <h2 class="font-bold uppercase leading-none tracking-tighter text-gray-900 before:inline-block before:text-red-500 before:content-['.'] before:mr-[0.15em]  text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6.5xl xl:leading-[0.85em]">Twitter Feed</h2>
+                                            </div>
+                                            <a href="#" class="inline-flex me-2 text-center font-bold leading-none transition-colors uppercase justify-center gap-x-3 py-3 px-4 md:py-[13px] lg:px-7 text-sm text-white bg-blue-400 hover:bg-blue-500 mb-2">
+                                                
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                                                </svg> Follow Me!
+                                            </a>
+                                        </div>
+
+                                       <!-- ************* end aval************** -->
+                                        
+                                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-7.5 place-items-center font-naz">
+
+                                            <div class="grid gap-5 md:gap-6 lg:gap-7.5 font-naz ">
+
+                                                <div class="bg-gray-50 md:ms-10 ms-1 p-6 dark:bg-gray-700 md:p-7 lg:p-8">
+                                                    <div class="mb-7 flex items-center gap-x-3">
+                                                        <figure class="flex-shrink-0 overflow-hidden rounded-full">
+                                                            <img class="aspect-square w-10 object-cover" src="img/user-1-40x40.png" alt="NekoMaGiX">
+                                                        </figure>
+                                                        <div class="flex-1">
+                                                            <h5 class="text-base font-bold leading-none tracking-tighter text-gray-900 dark:text-white">
+                                                                <a href="#">NekoMaGiX</a>
+                                                            </h5>
+                                                            <div class="text-xs font-medium leading-tight tracking-tighter text-red-500 transition-colors hover:text-gray-900 ">
+                                                                <a href="#">@NekoMGX</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mb-6 text-sm font-medium leading-[22px] text-gray-900 dark:text-white [&amp;_a]:font-bold [&amp;_a]:text-[#01deff] hover:[&amp;_a]:text-gray-900 dark:hover:[&amp;_a]:text-white [&amp;_img]:my-4 [&amp;_img]:block">
+                                                        Remember that this Friday at 9:00PM PCT I’ll be live streaming with 
+                                                        <a href="#"class=" text-blue-400 hover:text-blue-500">@gamehuntress</a>
+                                                        playing the new story mode DLC of Witch Hunters!
+                                                    </div>
+                                                    <div class="text-xs tracking-tighter text-gray-400">
+                                                        <time datetime="2023-01-01">26 minutes ago</time>
+                                                    </div>
+                                                </div>
+                                            
+                                        <div class="bg-gray-50 md:ms-10 ms-1 p-6 dark:bg-gray-700 md:p-7 lg:p-8">
+                                            <div class="mb-7 flex items-center gap-x-3">
+                                                <figure class="flex-shrink-0 overflow-hidden rounded-full">
+                                                    <img class="aspect-square w-10 object-cover" src="img/user-1-40x40.png" alt="NekoMaGiX">
+                                                </figure>
+                                        <div class="flex-1">
+                                            <h5 class="text-base font-bold leading-none tracking-tighter text-gray-900 dark:text-white"><a href="#">NekoMaGiX</a>
+                                        </h5>
+                                        <div class="text-xs font-medium leading-tight tracking-tighter text-red-500 transition-colors hover:text-gray-900 dark:hover:text-white">
+                                            <a href="#">@NekoMGX</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-6 text-sm font-medium leading-[22px] text-gray-900 dark:text-white [&amp;_a]:font-bold [&amp;_a]:text-[#01deff] hover:[&amp;_a]:text-gray-900 dark:hover:[&amp;_a]:text-white [&amp;_img]:my-4 [&amp;_img]:block">I’m gonna be having a special stream tonight at 9pm PCT! <a href="#" class="text-blue-500 hover:text-blue-400">bitlyx.com/sTrm</a>
+                                
+                            </div>
+
+                                <div class="text-xs tracking-tighter text-gray-400">
+                                    <time datetime="2023-01-01">3 hours ago</time>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="grid gap-5 md:gap-6 lg:gap-7.5">
+                            <div class="bg-gray-50 p-6 dark:bg-gray-700 md:p-7 lg:p-8">
+                                <div class="mb-7 flex items-center gap-x-3">
+                                    <figure class="flex-shrink-0 overflow-hidden rounded-full">
+                                        <img class="aspect-square w-10 object-cover" src="img/user-1-40x40.png" alt="NekoMaGiX">
+                                    </figure>
+                                    <div class="flex-1">
+                                        <h5 class="text-base font-bold leading-none tracking-tighter text-gray-900 dark:text-white"><a href="#">NekoMaGiX</a>
+                                        </h5>
+                                        <div class="text-xs font-medium leading-tight tracking-tighter text-primary transition-colors hover:text-gray-900 text-red-500 "><a href="#">@NekoMGX</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-6 text-sm font-medium leading-[22px] text-gray-900 dark:text-white [&amp;_a]:font-bold [&amp;_a]:text-[#01deff] hover:[&amp;_a]:text-gray-900 dark:hover:[&amp;_a]:text-white [&amp;_img]:my-4 [&amp;_img]:block">YEAH! Finally I got my Witch Hunters Deluxe Pack! Keep an eye out for the upcoming unboxing video!<p><img src="img/twitter-img-1.jpg" alt=""></p>
+                                    
+                                    <a href="#"class="text-blue-500 hover:text-blue-400" >#unboxing</a> <a href="#"class="text-blue-500 hover:text-blue-400" >#witchhunters</a> <a class="text-blue-500 hover:text-blue-400" href="#">#deluxe</a>
+                                </div>
+                                <div class="text-xs tracking-tighter text-gray-400"><time datetime="2023-01-01">14 hours ago</time>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="md:col-span-full lg:col-span-1 grid md:grid-cols-2 lg:grid-cols-1 gap-5 md:gap-6 lg:gap-7.5">
+                            <div class="bg-gray-50 p-6 dark:bg-gray-700 md:p-7 lg:p-8">
+                                <div class="mb-7 flex items-center gap-x-3">
+                                    <figure class="flex-shrink-0 overflow-hidden rounded-full"><img class="aspect-square w-10 object-cover" src="img/user-1-40x40.png" alt="NekoMaGiX">
+                                    </figure>
+                                    <div class="flex-1">
+                                        <h5 class="text-base font-bold leading-none tracking-tighter text-gray-900 dark:text-white"><a href="#">NekoMaGiX</a>
+                                        </h5>
+                                        <div class="text-xs font-medium leading-tight tracking-tighter text-red-500 transition-colors hover:text-gray-900 dark:hover:text-white"><a href="#">@NekoMGX</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-6 text-sm font-medium leading-[22px] text-gray-900 dark:text-white [&amp;_a]:font-bold [&amp;_a]:text-[#01deff] hover:[&amp;_a]:text-gray-900 dark:hover:[&amp;_a]:text-white [&amp;_img]:my-4 [&amp;_img]:block">I’ll be having a Mochi’s Island speedrun for charity! Hope to see you all there! <a href="#" class="text-blue-500">bitlyx.com/chRty</a>
+                                </div>
+                                <div class="text-xs tracking-tighter text-gray-400"><time datetime="2023-01-01">2 days ago</time>
+                                </div>
+                            </div>
+
+
+
+                            <div class="bg-gray-50 p-6 dark:bg-gray-700 md:p-7 lg:p-8">
+                                <div class="mb-7 flex items-center gap-x-3">
+                                    <figure class="flex-shrink-0 overflow-hidden rounded-full"><img class="aspect-square w-10 object-cover" src="img/user-1-40x40.png" alt="NekoMaGiX"></figure>
+                                    <div class="flex-1">
+                                        <h5 class="text-base font-bold leading-none tracking-tighter text-gray-900 dark:text-white"><a href="#">NekoMaGiX</a>
+                                        </h5>
+                                        <div class="text-xs font-medium leading-tight tracking-tighter text-primary transition-colors hover:text-gray-900 dark:hover:text-white"><a href="#" class="text-red-500">@NekoMGX</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-6 text-sm font-medium leading-[22px] text-gray-900 dark:text-white [&amp;_a]:font-bold [&amp;_a]:text-[#01deff] hover:[&amp;_a]:text-gray-900 dark:hover:[&amp;_a]:text-white [&amp;_img]:my-4 [&amp;_img]:block">We’re a few days away from the charity livestream for 
+                                    <a href="#" class="text-blue-500">@purplecross</a>
+                                     Join us for a great cause!
+                                    </div>
+                                    <div class="text-xs tracking-tighter text-gray-400"><time datetime="2023-01-01">5 days ago</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- *********************** end section6 ********************** -->
+
+                <footer id="site-footer">
+                    <div class="bg-gray-50 py-12 dark:bg-gray-900 sm:py-16 md:py-20 lg:py-24 xl:py-[104px]">
+                        <div class="mx-auto max-w-[1440px] px-5">
+                            <div class="grid grid-cols-1 items-baseline justify-center gap-y-10 lg:grid-cols-[20%_1fr_20%]">
+                                <div class="justify-self-center lg:justify-self-start">
+                                    <a href="_str2-index.html">
+
+                                        <svg width="96" height="26" viewBox="0 0 96 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="fill-red-500" fill-rule="evenodd" clip-rule="evenodd" d="M0 7.60599C2.352 7.60599 4.563 7.60599 6.864 7.60599C6.572 10.313 6.284 12.971 5.984 15.752C7.056 15.752 8.037 15.752 9.142 15.752C8.708 17.967 8.3 20.051 7.892 22.135C7.941 22.154 7.989 22.176 8.038 22.196C10.029 19.206 12.019 16.217 14.103 13.087C13.013 13.087 12.067 13.087 10.951 13.087C12.134 11.192 13.224 9.44599 14.368 7.61299C15.827 7.61299 17.417 7.61299 19.083 7.61299C18.995 7.90399 18.941 8.13599 18.856 8.35699C16.767 13.794 14.666 19.227 12.597 24.672C12.4 25.193 12.16 25.374 11.592 25.355C10.234 25.312 8.872 25.327 7.512 25.349C7.074 25.357 6.819 25.271 6.642 24.817C4.504 19.34 2.341 13.872 0.19 8.39999C0.105 8.18199 0.079 7.94199 0 7.60599Z"></path>
+                                        
+                                        <path class="fill-gray-900 dark:fill-white" fill-rule="evenodd" clip-rule="evenodd" d="M95.992 16.602C95.992 17.984 95.997 19.364 95.991 20.744C95.977 23.573 94.489 25.177 91.706 25.251C89.598 25.308 87.486 25.254 85.377 25.267C84.756 25.272 84.465 25.026 84.467 24.369C84.477 19.183 84.476 13.999 84.468 8.81299C84.467 8.26999 84.66 7.927 85.222 7.931C87.58 7.946 89.947 7.86199 92.294 8.03199C94.66 8.20399 95.94 9.768 95.985 12.207C96.014 13.67 95.991 15.136 95.992 16.602ZM88.044 22.097C88.999 22.097 89.882 22.098 90.763 22.096C92.125 22.092 92.446 21.802 92.462 20.424C92.486 18.453 92.476 16.482 92.466 14.511C92.462 13.723 92.432 12.936 92.398 12.15C92.372 11.508 91.987 11.144 91.397 11.12C90.297 11.075 89.196 11.107 88.044 11.107C88.044 14.777 88.044 18.37 88.044 22.097Z">
+
+                                        </path>
+                                        
+                                        <path class="fill-gray-900 dark:fill-white" fill-rule="evenodd" clip-rule="evenodd" d="M48.739 18.348C47.533 19.292 46.956 20.395 47.152 21.9C47.26 22.729 47.166 23.588 47.173 24.432C47.177 24.996 46.902 25.26 46.359 25.26C45.721 25.261 45.082 25.257 44.443 25.261C43.887 25.264 43.648 24.982 43.648 24.423C43.652 19.211 43.653 14 43.645 8.789C43.645 8.171 43.931 7.921 44.504 7.922C47.638 7.931 47.141 7.621 47.169 10.427C47.186 12.044 47.173 13.66 47.173 15.47C48.719 13.155 50.165 11.036 51.56 8.883C52.005 8.194 52.549 7.881 53.351 7.912C54.192 7.945 55.034 7.919 55.876 7.919C55.913 8.015 55.949 8.11 55.986 8.207C55.806 8.535 55.656 8.884 55.443 9.188C54.055 11.158 52.669 13.127 51.248 15.073C50.938 15.498 50.91 15.789 51.205 16.246C52.841 18.792 54.446 21.358 56.038 23.934C56.228 24.241 56.268 24.643 56.379 25.002C56.044 25.088 55.713 25.197 55.374 25.257C53.651 25.556 52.529 24.882 51.722 23.267C50.872 21.571 49.763 20.01 48.739 18.348Z"></path>
+                                        
+                                        <path class="fill-gray-900 dark:fill-white" fill-rule="evenodd" clip-rule="evenodd" d="M23.837 7.91999C26.734 7.92099 26.211 7.72499 26.885 10.308C28.077 14.872 29.252 19.439 30.434 24.007C30.736 25.172 30.67 25.259 29.474 25.262C27.191 25.268 27.191 25.268 26.602 23.056C26.573 22.948 26.539 22.837 26.534 22.726C26.492 21.899 26.058 21.685 25.28 21.737C24.175 21.812 23.06 21.776 21.951 21.747C21.512 21.736 21.302 21.878 21.214 22.323C21.072 23.038 20.851 23.738 20.706 24.454C20.583 25.058 20.263 25.307 19.657 25.269C19.076 25.235 18.491 25.269 17.909 25.259C17.045 25.245 16.934 25.1 17.155 24.243C17.98 21.034 18.813 17.827 19.642 14.62C20.112 12.798 20.585 10.978 21.053 9.15699C21.334 8.06299 21.497 7.92799 22.589 7.92099C23.004 7.91799 23.421 7.91999 23.837 7.91999ZM25.631 18.836C25.036 16.412 24.469 14.107 23.902 11.8C23.857 11.804 23.812 11.807 23.767 11.81C23.199 14.138 22.631 16.466 22.053 18.835C23.246 18.836 24.375 18.836 25.631 18.836Z"></path>
+                                        
+                                        <path class="fill-gray-900 dark:fill-white" fill-rule="evenodd" clip-rule="evenodd" d="M69.921 21.069C70.426 18.674 70.899 16.429 71.371 14.185C71.754 12.372 72.155 10.563 72.514 8.74499C72.627 8.16399 72.932 7.92299 73.48 7.92199C74.146 7.92099 74.813 7.90499 75.477 7.92399C76.332 7.94799 76.492 8.17299 76.272 9.04299C75.175 13.369 74.073 17.694 72.973 22.019C72.766 22.836 72.553 23.651 72.354 24.47C72.223 25.011 71.915 25.276 71.348 25.266C70.351 25.248 69.352 25.257 68.353 25.262C67.806 25.263 67.505 25.026 67.363 24.459C66.056 19.288 64.73 14.122 63.405 8.95599C63.232 8.28799 63.426 7.91399 64.148 7.92299C67.541 7.96599 66.907 7.45499 67.548 10.48C68.284 13.94 69.016 17.401 69.75 20.861C69.755 20.886 69.781 20.902 69.921 21.069Z"></path>
+                                        
+                                        <path class="fill-gray-900 dark:fill-white" fill-rule="evenodd" clip-rule="evenodd" d="M35.842 22.08C37.714 22.08 39.434 22.112 41.152 22.067C41.972 22.044 42.221 22.386 42.213 23.169C42.192 25.417 42.351 25.269 40.215 25.264C37.938 25.258 35.66 25.243 33.384 25.274C32.598 25.285 32.303 25.003 32.307 24.19C32.331 19.117 32.329 14.044 32.308 8.97C32.305 8.203 32.583 7.907 33.33 7.914C36.258 7.94 35.825 7.67 35.838 10.419C35.856 13.941 35.842 17.466 35.842 20.988C35.842 21.319 35.842 21.65 35.842 22.08Z"></path>
+                                        
+                                        <path class="fill-gray-900 dark:fill-white" fill-rule="evenodd" clip-rule="evenodd" d="M61.602 16.588C61.602 19.122 61.579 21.656 61.616 24.189C61.628 25.005 61.329 25.324 60.545 25.269C60.048 25.235 59.546 25.243 59.048 25.267C58.325 25.301 58.071 24.953 58.073 24.246C58.087 19.149 58.09 14.055 58.07 8.95901C58.067 8.17701 58.4 7.90901 59.122 7.91701C62.045 7.94401 61.572 7.64601 61.599 10.34C61.618 12.421 61.602 14.506 61.602 16.588Z"></path>
+                                        
+                                        <path class="fill-gray-900 dark:fill-white" fill-rule="evenodd" clip-rule="evenodd" d="M81.431 16.678C81.431 19.184 81.407 21.69 81.444 24.195C81.456 25.016 81.146 25.285 80.368 25.272C77.595 25.228 77.915 25.57 77.911 22.804C77.902 18.271 77.908 13.739 77.908 9.206C77.909 8.055 78.028 7.922 79.121 7.922C81.82 7.924 81.406 7.701 81.428 10.259C81.444 12.399 81.431 14.538 81.431 16.678Z"></path>
+                                        
+                                        <path class="fill-red-500" fill-rule="evenodd" clip-rule="evenodd" d="M61.43 2C61.43 3.001 61.43 3.967 61.43 4.98C60.435 4.98 59.485 4.98 58.485 4.98C58.485 3.976 58.485 3.01 58.485 2C59.479 2 60.429 2 61.43 2Z">
+
+                                        </path>
+                                        
+                                        <path class="fill-red-500" fill-rule="evenodd" clip-rule="evenodd" d="M81.487 4.99701C80.505 4.99701 79.573 4.99701 78.582 4.99701C78.582 4.01001 78.582 3.04201 78.582 2.01501C79.523 2.01501 80.475 2.01501 81.487 2.01501C81.487 2.97101 81.487 3.93801 81.487 4.99701Z"></path>
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <!-- *****************nav**************** -->
+
+                            <nav>
+                                <ul class="flex flex-wrap justify-center gap-x-4 text-base font-bold uppercase tracking-tight sm:gap-x-6 lg:gap-x-7 xl:gap-x-10">
+                                    <li><a class="text-gray-900 transition-colors hover:text-red-500 text-md " href="index">Home</a></li>
+                                    
+                                    <li><a class="text-gray-900 transition-colors hover:text-red-500 text-md " href="stream">Stream</a></li>
+                                    
+                                    <li><a class="text-gray-900 transition-colors hover:text-red-500 text-md " href="affiliates">Affiliates</a></li>
+                                    
+                                    <li><a class="text-gray-900 transition-colors hover:text-red-500 text-md " href="shop-grid-3">Shop</a></li>
+                                    
+                                    <li><a class="text-gray-900 transition-colors hover:text-red-500 text-md" href="contact">Contact</a></li>
+                                    
+                                    <li><a class="text-gray-900 transition-colors hover:text-red-500 text-md " href="#">Donate</a></li>
+                                    
+                                    <li><a class="text-gray-900 transition-colors hover:text-red-500 text-md " href="#">Subscribe</a></li>
+                                </ul>
+                            </nav>
+
+                            <!-- Social Links -->
+
+
+                            <ul class="flex-wrap gap-3.5 lg:gap-4 xl:gap-6 self-center  flex justify-center">
+                    
+                    
+                                <li>
+                                <a class="text-gray-900 transition-all hover:text-red-500 dark:text-white dark:hover:text-red-500"
+                                href="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                                  </svg>
+                            </a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a class="text-gray-900 transition-all hover:text-red-500 dark:text-white dark:hover:text-red-500"
+                            href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                            </svg>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a class="text-gray-900 transition-all hover:text-red-500 dark:text-white dark:hover:text-red-500"
+                         href="" title="instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                          </svg>
+                    </a>
+                </li>
+            
+                        <li>
+                            <a class="text-gray-900 transition-all hover:text-red-500 dark:text-white dark:hover:text-red-500"
+                            href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitch" viewBox="0 0 16 16">
+                                <path d="M3.857 0 1 2.857v10.286h3.429V16l2.857-2.857H9.57L14.714 8V0H3.857zm9.714 7.429-2.285 2.285H9l-2 2v-2H4.429V1.143h9.142v6.286z"/>
+                                <path d="M11.857 3.143h-1.143V6.57h1.143V3.143zm-3.143 0H7.571V6.57h1.143V3.143z"/>
+                              </svg>
+                        </a>
+                    </li>
+                    
+                        <li>
+                            <a class="text-gray-900 transition-all hover:text-red-500 dark:text-white dark:hover:text-red-500"
+                            href="" >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
+                                <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/>
+                              </svg>
+                        </a>
+                    </li>
+                </ul>
+                                <!-- Social Links / End -->
+                            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-red-500 py-8">
+                        <div class="mx-auto max-w-[1440px] px-5">
+                            <div class="flex flex-col flex-wrap items-center justify-between gap-y-2 text-center text-sm font-bold leading-6 tracking-tight text-white md:flex-row">
+                                <div>Developed &amp; Designed by <a class="vv-link-underline" href="https://dan-fisher.dev" target="_blank">YasamanMirdoraghi</a>
+                                </div>
+                                <nav>
+                                   
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+
+                
+
+
+
+    <script src="js/project.js"></script>
+
+</body>
+</html>
